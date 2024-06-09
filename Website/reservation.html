@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModerationTrain</title>
+    <link rel="stylesheet" href="reserv.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<style>
+.Prix{
+  background-color: #04aa17;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+
+}
+
+</style>
+<body>
+    <div class="navbar">
+        <div class="logo">Moderation Train</div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Connexion</a></li>
+            <li><a href="register.html">Inscription</a></li>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="reservation.html">Réserver un billet</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <form class="search-form" method="post" action="">
+        <label for="from">Départ</label>
+        <input type="text" id="from" name="from" placeholder="Gare ou ville">
+        <label for="to">Arrivée</label>
+        <input type="text" id="to" name="to" placeholder="Gare ou ville">
+        <div class="from-to">
+            <div>
+                <label for="date">Date et heure</label>
+                <input type="datetime-local" id="date" name="date">
+            </div>
+            <div>
+                <label for="passengers">Passagers</label>
+                <select id="passengers" name="passengers">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+        </div>
+        <div class="options">
+            <label for="quiet-seat">Place tranquille</label>
+            <input type="checkbox" id="quiet-seat" name="quiet-seat" value="+3">
+            <span>+3 €</span>
+            <label for="power-socket">Prise électrique</label>
+            <input type="checkbox" id="power-socket" name="power-socket" value="+2">
+            <span>+2 €</span>
+            <label for="extra-luggage">Bagage supplémentaire volumineux</label>
+            <input type="checkbox" id="extra-luggage" name="extra-luggage" value="+5">
+            <span>+5 €</span>
+            <label for="sms-info">Information par SMS en cas de perturbation du trafic</label>
+            <input type="checkbox" id="sms-info" name="sms-info" value="+1">
+            <span>+1 €</span>
+            <label for="cancellation-guarantee">Garantie Annulation et trajet perturbé pour son aller/retour</label>
+            <input type="checkbox" id="cancellation-guarantee" name="cancellation-guarantee" value="+2.9">
+            <span>+2.9 €</span>
+        </div>
+        
+           
+         <a href="choixbillet.html" class="Prix"> Rechercher les meilleurs prix</a>    
+    </form>
+    <div class="info">
+        <h3>Vous pouvez utiliser vos cartes de réduction</h3>
+        <p>Vous pouvez utiliser vos cartes de réduction SNCF, TGVmax, TER, Intercités et même les cartes de réduction régionales chez nous. Encore mieux : elles sont en vente sur notre site.</p>
+        <button class="add-card-btn">Ajouter une carte</button>
+    </div>
+</body>
+</html>

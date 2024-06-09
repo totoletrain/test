@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ModerationTrain</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    </head>
+    <style>
+        .Prix{
+          background-color: #04aa17;
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+        
+        
+        }</style>
+<body>
+    <div class="navbar">
+        <div class="logo">Moderation Train</div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Connexion</a></li>
+            <li><a href="register.html">Inscription</a></li>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="reservation.html">Réserver un billet</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    <div class="search-results">
+        <h2>Résultats de recherche pour votre trajet</h2>
+        <p>Ville de départ : <span id="from_station"></span></p>
+        <p>Ville d'arrivée : <span id="to_station"></span></p>
+        <div class="train-list">
+            <h3>Trajets disponibles</h3>
+            <ul id="train-list">
+                <!-- Les trajets seront affichés ici -->
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

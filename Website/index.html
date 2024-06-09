@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - ModerationTrain</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">ModerationTrain</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Connexion</a></li>
+                <li><a href="register.html">Inscription</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="form-wrapper">
+        <div class="container">
+            <h1>Connexion</h1>
+            <div class="form">
+                <form action="login.php" method="POST">
+                    <label for="login-email">Email :</label>
+                    <input type="email" id="emailClient" name="emailClient" required>
+                    <label for="login-password">Mot de passe :</label>
+                    <input type="password" id="passwordClient" name="passwordClient" required>
+                    <button type="submit">Se connecter</button>
+                    <div id="result"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('login-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            fetch('login.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then((message) => {
+                const resultDiv = document.getElementById('result');
+                if (message.includes('Connexion réussie!')) {
+                    resultDiv.style.color = 'green';
+                } else {
+                    resultDiv.style.color = 'red';
+                }
+                resultDiv.innerText = message;
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+        });
+    </script>
+</body>
+</html>
